@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Home Page - {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+    Hi, my name is Arundhati Roy.
+    I am 13 years old.
+    <br>
+    Page visit count: {{ page_visit_count }}
+    <br>
+    Total visit count: {{ total_visit_count }}
+    <br>
+    {% include 'snippets/welcome_massage.html' %}
+    <br>
+
+    {% if page_visit_count > 25 %}
+        <h1>Over visit</h1>
+    {% else %}
+        <h1>More Visits left</h1>
+    {% endif %}
+{% endblock content %}
+
